@@ -150,7 +150,7 @@ def gen(lang):
 
         outfile.write((templ['footer']).encode("utf-8"))
         outfile.close()
-
+        print('nF1)
 def main():
     try:
         if sys.argv[1] == 'all':
@@ -160,8 +160,7 @@ def main():
             gen(sys.argv[1])
     except:
         raise RuntimeError("Unsupported binding %s" % sys.argv[1])
-
-if __name__ == "__main__":
+        if __name__ == "__main__":
     if len(sys.argv) < 2:
         print("Usage:", sys.argv[0], " <bindings: java|python|ocaml|all>")
         sys.exit(1)
